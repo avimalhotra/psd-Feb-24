@@ -44,7 +44,7 @@ body{
 }
 
 .row{ display: flex; flex-flow: row wrap; margin: 0 -1rem; }
-[class^="col"]{ flex: 1 0 auto; padding: 0 1rem; }
+[class^="col"]{ flex: 1 0 auto; padding: 0 1rem;}
 .col-1{ flex-basis:8.33%; max-width: 8.33%;}
 .col-2{ flex-basis:16.66%; max-width: 16.66%;}
 .col-3{ flex-basis:25%; max-width: 25%;}
@@ -155,6 +155,28 @@ canvas{ max-width: 100%; height: auto; background: #ddd; margin-top: 50px;}
 .wrap-10 input::placeholder{ color: #fff;}
 
 
+.wrap-11{ background: #7f7f7f; color: #fff; padding: 28px 0 0 0;}
+.box{ background: #a6a6a6; line-height: 95px; margin-bottom: 27px; text-align: center; }
+
+
+.wrap-12{ background: #ebebeb; color: #363636; padding: 100px 0;}
+address{ line-height: 30px; color: #898989 }
+address a{ color: inherit;}
+.social2{ margin: 20px 0; }
+.social2 li{ margin-right: 10px; }
+.social2 li a{ display: block; color: var(--red);}
+.wrap-12 label{ border: 2px solid; padding: 16px; margin-bottom: 2rem; }
+.wrap-12 input{ background: none; border: none;}
+.wrap-12 textarea{ background: none; border: none; resize: none; height: 42px; vertical-align: top; }
+.wrap-12 input:focus,.wrap-12 textarea:focus{ outline: none;}
+.wrap-12 label:focus-within{  border-color: var(--red);}
+.wrap-12 button{ width: 100%; background: #fff; border: none; color: var(--red); height: 80px; border-radius: 10px; font: 16px var(--ff); }
+.wrap-12 button span.fa{ font-size: 36px; vertical-align: middle;}
+
+
+.wrap-13{ background: #252525; padding: 20px 0; text-align: center; color: #fff;}
+
+
 /* responsive */
 @media screen and (max-width:1220px){
     html{ font-size: 13px;}
@@ -174,10 +196,13 @@ canvas{ max-width: 100%; height: auto; background: #ddd; margin-top: 50px;}
     .col-t-10{ flex-basis:83.33%; max-width: 83.33%;}
     .col-t-11{ flex-basis:91.66%; max-width: 91.66%;}
     .col-t-12{ flex-basis:100%; max-width: 100%;}
+    .col-t-hide{ display: none;}
+    .col-t-auto{ width: 20%; max-width: 20%;}
     .banner p{ font-size: 3rem; }
     .gap{margin-left: 50px;}
     .social{ flex-flow: column wrap; top: 0;}
     .social li{ margin: 0 0 10px 0;}
+    
 }
 @media screen and (max-width:767px){
     html{ font-size: 12px;}
@@ -201,6 +226,7 @@ canvas{ max-width: 100%; height: auto; background: #ddd; margin-top: 50px;}
     .collapse .flex{ flex-flow: column wrap; text-align: right; }
     .collapse a{ line-height: 40px;}
     .wrap-5 .btn{ margin-right: 6px}
+    .col-t-auto{ flex-basis: 33.33%; max-width: 50%; }
 
 }
 @media screen and (max-width:460px){
@@ -220,9 +246,9 @@ canvas{ max-width: 100%; height: auto; background: #ddd; margin-top: 50px;}
     .banner button{ margin-bottom: 2rem;}
     .wrap-8 p{ font-size: 60px;}
     .wrap-10 input{ width: 240px; font-size: 24px;}
+    .col-t-auto{ flex-basis: 50%; max-width: 100%; }
 }
 
-@media screen and (max-width:359x){
-    
-
+@media screen and (max-width:359px){
+    .wrap-10 input{ width: 200px;}
 }
