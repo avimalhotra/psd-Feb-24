@@ -6,6 +6,8 @@
     <title>IDDO</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" integrity="sha512-UBY4KATrDAEKgEEU+RAfY4yWrK0ah43NGwNr5o/xmncxsT+rv8jp7MI3a00I0Ep3NbAx05U5kw3DvyNCoz+Wcw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" >
 </head>
 <body id="home">
 <header>
@@ -39,7 +41,7 @@
         <div class="flex align-center">
             <div><button class="fa fa-play-circle-o"></button></div>
             <div>
-                <p>Let me show you a few things.</p>
+                <p></p>
                 <a href="">Click To Play Video</a>
             </div>
         </div>
@@ -49,7 +51,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4 col-t-6 col-p-12">
-                <h2>OUR SERVICES.</h2>
+                <h2 data-aos="fade-up">OUR SERVICES.</h2>
             </div>
             <div class="col-8 col-t-12">
                 <div class="row gy-4">
@@ -118,7 +120,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4 col-t-6 col-p-12">
-                <h2>OUR WORKS.</h2>
+                <h2 data-aos="fade-right">OUR WORKS.</h2>
                 <button class="btn active">All</button><button class="btn">Website</button><button class="btn">Branding</button>
             </div>
         </div>  
@@ -268,11 +270,11 @@
                             </figure>
                         </blockquote>
                     </div>
-                    <ul class="pager flex justify-center">
+                    <!-- <ul class="pager flex justify-center">
                         <li><a class="active" aria-label="1" href=""></a></li>
                         <li><a aria-label="2" href=""></a></li>
                         <li><a aria-label="3" href=""></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
             <div class="col-2"></div>
@@ -283,12 +285,12 @@
     <div class="container">
         <div class="row">
             <div class="col-4 col-t-6 col-p-12">
-                <h2>OUR TEAM.</h2>
+                <h2 data-aos="fade-up">OUR TEAM.</h2>
             </div>
         </div>  
         <div class="row">
             <div class="col-4 col-m-12">
-                <div class="team">
+                <div class="team" data-aos="fade-right">
                     <img src="img/michael.webp" alt="michael joe" width="170" height="170" loading="lazy">
                     <ul class="social flex">
                         <li><a href=""><span class="fa fa-twitter"></span></a></li>
@@ -303,7 +305,7 @@
                 </div>
             </div>
             <div class="col-4 col-m-12">
-                <div class="team">
+                <div class="team" data-aos="fade-up">
                     <img src="img/michael.webp" alt="michael joe" width="170" height="170" loading="lazy">
                     <ul class="social flex">
                         <li><a href=""><span class="fa fa-twitter"></span></a></li>
@@ -318,7 +320,7 @@
                 </div>
             </div>
             <div class="col-4 col-m-12">
-                <div class="team">
+                <div class="team" data-aos="fade-left">
                     <img src="img/michael.webp" alt="michael joe" width="170" height="170" loading="lazy">
                     <ul class="social flex">
                         <li><a href=""><span class="fa fa-twitter"></span></a></li>
@@ -518,7 +520,19 @@
         <p>&copy; 2024</p>
     </div>
 </footer>  
+
+<div class="formdata" hidden>
+    <button class="close">&times;</button>
+    <form action="">
+        <label>Name: <input type="text" required></label>
+        <label>Password: <input type="password" required></label>
+        <button class="btn">Send</button>
+    </form>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" integrity="sha512-p55Bpm5gf7tvTsmkwyszUe4oVMwxJMoff7Jq3J/oHaBk+tNQvDKNz9/gLxn9vyCjgd6SAoqLnL13fnuZzCYAUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 $(function(){
     $(".accordion a").click(function(e){
@@ -576,10 +590,40 @@ $(function(){
     $(".signup").click(function(){
         $("body").append(`<div class="overlay"></div>`);
         $("body").append(`<div class="popover"></div>`);
-        //$("html").css({overflow:"hidden"});
+        $("body .popover").append($(".formdata").html());
+        $(".popover input:first").focus();
+
+        function closePopup(){ $(".popover, .overlay").remove()}
+
+        $(".popover .close, .overlay").click(function(){ closePopup() })
+
+        $(window).keyup(function(e){
+            if(e.which==27){ closePopup() }
+        });
     });
 
+
+    $(".reviews").bxSlider({
+        controls:false,
+        auto:true,
+        pause:5000,
+        autoHover:true
+    });
     
+    AOS.init();
+
+    const str="Let me show you a few things.";
+
+    function timer(){
+        let counter=0;
+        $(".banner p").text("");
+        setInterval(i=>{
+            $(".banner p").append(str[counter++])
+        },50);
+    }
+    timer();
+    setInterval(timer,3000)
+
 
 });
 </script>
